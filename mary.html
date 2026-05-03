@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadeke Beauty | Ibadan</title>
+
+    <style>
+        /* General Page Styling to allow for scrolling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdfdfd;
+            min-height: 150vh; /* Extra height so you can test the scroll button */
+        }
+
+        /* --- Footer Styling --- */
+        footer {
+            background-color: #1a1a1a; /* Dark, elegant background */
+            color: #ffffff;
+            padding: 60px 20px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-info h3, .footer-contact h3, .footer-social h3, .footer-map h3 {
+            color: #d4a373; /* Gold accent color */
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-container p {
+            line-height: 1.6;
+            color: #cccccc;
+            margin: 8px 0;
+        }
+
+        /* Social Media Buttons */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-link {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #d4a373;
+            color: #d4a373;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            background: #d4a373;
+            color: #1a1a1a;
+            transform: translateY(-3px);
+        }
+
+        .map-link {
+            color: #d4a373;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* JavaScript Back to Top Button Styling */
+        #backToTop {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #d4a373;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        #backToTop:hover {
+            background-color: #b88b5d;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content Placeholder -->
+    <div style="padding: 100px 20px; text-align: center;">
+        <h1>Welcome to Fadeke Beauty</h1>
+        <p>Scroll down to see the elegant footer and interactive button!</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Fadeke Beauty HQ</h3>
+                <p>123 Elegance Way, Ibadan</p>
+                <p>Oyo, Nigeria</p>
+                <p><strong>Hours:</strong> Mon - Sat: 9am - 6pm</p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Get in Touch</h3>
+                <p>Email: <a href="mailto:hello@fadekebeauty.com" style="color: #ccc; text-decoration: none;">hello@fadekebeauty.com</a></p>
+                <p>Phone: <a href="tel:+2348031541160" style="color: #ccc; text-decoration: none;">+234 803 154 1160</a></p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@fadekebeauty" class="social-link" target="_blank">TikTok</a>
+                    <a href="https://www.instagram.com/fadekebeauty" class="social-link" target="_blank">Instagram</a>
+                    <a href="https://wa.me/2348031541160" class="social-link" target="_blank">WhatsApp Booking</a>
+                </div>
+            </div>
+
+            <div class="footer-map">
+                <h3>Location</h3>
+                <a href="https://maps.google.com" target="_blank" class="map-link">View on Google Maps</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fadeke Beauty. All Rights Reserved.</p>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" title="Go to top">↑</button>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Get the button
+        const topButton = document.getElementById("backToTop");
+
+        // When the user scrolls down 300px from the top, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+
+        // When the user clicks the button, scroll to the top smoothly
+        topButton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
+
+</body>
+</html>
